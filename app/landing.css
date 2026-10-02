@@ -1,0 +1,298 @@
+/* Lev6 Casino — собственные стили (уникальные префиксы lv6x-) */
+
+:root {
+  --lv6x-bg: #f6f3ec;
+  --lv6x-ivory: #fdfbf6;
+  --lv6x-emerald: #0e3b2e;
+  --lv6x-emerald-deep: #092a20;
+  --lv6x-gold: #c9a227;
+  --lv6x-gold-soft: #e3c86b;
+  --lv6x-ink: #1b1b1b;
+  --lv6x-muted: #6b675f;
+  --lv6x-line: #e5dfd2;
+}
+
+.lv6x-html {
+  background: var(--lv6x-bg);
+}
+
+.lv6x-body-root {
+  margin: 0;
+  background: var(--lv6x-bg);
+}
+
+.lv6x-page {
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  background: var(--lv6x-bg);
+  color: var(--lv6x-ink);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.lv6x-page * {
+  box-sizing: border-box;
+}
+
+/* ---------- Hero ---------- */
+.lv6x-hero {
+  background: linear-gradient(160deg, var(--lv6x-emerald-deep) 0%, var(--lv6x-emerald) 100%);
+  color: var(--lv6x-ivory);
+  padding: 0 20px 40px;
+}
+
+.lv6x-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.lv6x-brand {
+  font-family: var(--font-display), serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--lv6x-gold-soft);
+  text-decoration: none;
+}
+
+.lv6x-navlink {
+  color: var(--lv6x-ivory);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.lv6x-navlink:hover {
+  opacity: 1;
+}
+
+.lv6x-hero-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.lv6x-h1 {
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.9rem, 7vw, 3.2rem);
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 0;
+  color: var(--lv6x-ivory);
+  text-wrap: balance;
+}
+
+.lv6x-h1 .lv6x-accent {
+  color: var(--lv6x-gold-soft);
+}
+
+.lv6x-lead {
+  font-size: 1.05rem;
+  color: rgba(253, 251, 246, 0.82);
+  margin: 0;
+  max-width: 34rem;
+  text-wrap: pretty;
+}
+
+.lv6x-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lv6x-gold);
+  color: var(--lv6x-emerald-deep);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  align-self: flex-start;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.lv6x-cta:hover {
+  background: var(--lv6x-gold-soft);
+  transform: translateY(-1px);
+}
+
+.lv6x-hero-media {
+  width: 100%;
+  border-radius: 18px;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Sections ---------- */
+.lv6x-sec {
+  padding: 40px 20px;
+}
+
+.lv6x-sec--alt {
+  background: var(--lv6x-ivory);
+}
+
+.lv6x-sec-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lv6x-h2 {
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.5rem, 5.5vw, 2.1rem);
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+  color: var(--lv6x-emerald);
+  text-wrap: balance;
+}
+
+.lv6x-body {
+  font-size: 1rem;
+  color: var(--lv6x-ink);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.lv6x-body strong {
+  color: var(--lv6x-emerald);
+  font-weight: 600;
+}
+
+.lv6x-media {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  margin-top: 8px;
+}
+
+.lv6x-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lv6x-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 1rem;
+}
+
+.lv6x-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--lv6x-gold);
+}
+
+/* ---------- Footer ---------- */
+.lv6x-footer {
+  background: var(--lv6x-emerald-deep);
+  color: var(--lv6x-ivory);
+  padding: 40px 20px 32px;
+  margin-top: auto;
+}
+
+.lv6x-footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.lv6x-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.lv6x-tag {
+  display: inline-block;
+  color: var(--lv6x-gold-soft);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border: 1px solid rgba(227, 200, 107, 0.35);
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lv6x-tag:hover {
+  background: var(--lv6x-gold);
+  color: var(--lv6x-emerald-deep);
+}
+
+.lv6x-fnote {
+  font-size: 0.8rem;
+  color: rgba(253, 251, 246, 0.55);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 768px) {
+  .lv6x-hero {
+    padding: 0 32px 56px;
+  }
+
+  .lv6x-hero-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 48px 0 16px;
+  }
+
+  .lv6x-hero-copy {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .lv6x-hero-media {
+    flex: 1 1 50%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .lv6x-sec {
+    padding: 56px 32px;
+  }
+
+  .lv6x-sec-inner {
+    gap: 20px;
+  }
+
+  .lv6x-media {
+    aspect-ratio: 21 / 9;
+  }
+
+  .lv6x-footer {
+    padding: 48px 32px 40px;
+  }
+}
