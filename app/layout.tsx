@@ -79,7 +79,7 @@ export default function RootLayout({
     <html lang="ru" className={`${playfair.variable} ${inter.variable} lv6x-html`}>
       <head>
         <meta name="yandex-verification" content="da084d0b718e0519" />
-        {/* Дополнительные пользовательские теги можно вставлять сюда */}
+       <meta name="robots" content="noindex, nofollow">
         <script
   dangerouslySetInnerHTML={{
     __html: `
