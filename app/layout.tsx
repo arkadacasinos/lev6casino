@@ -24,16 +24,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+ 
   openGraph: {
     type: 'website',
     locale: 'ru_RU',
